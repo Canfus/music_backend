@@ -1,0 +1,22 @@
+syntax = "proto3";
+
+package dev.music.auth;
+
+option java_multiple_files = true;
+option java_package = "dev.music.auth";
+
+service AuthService {
+  rpc SignUp (SignUpRequest) returns (SignUpResponse);
+}
+
+message SignUpRequest {
+  string email    = 1;
+  string username = 2;
+  string password = 3;
+}
+
+message SignUpResponse {
+  int64 id        = 1;
+  string email    = 2;
+  string username = 3;
+}

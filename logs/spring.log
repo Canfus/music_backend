@@ -1,0 +1,151 @@
+2025-08-14T13:21:38.147+03:00  INFO 18170 --- [music_auth] [main] dev.music.auth.AuthApplicationKt         : Starting AuthApplicationKt using Java 21.0.7 with PID 18170 (/Users/timurmuhametanov/Documents/dev/music/auth/build/classes/kotlin/main started by timurmuhametanov in /Users/timurmuhametanov/Documents/dev/music)
+2025-08-14T13:21:38.149+03:00  INFO 18170 --- [music_auth] [main] dev.music.auth.AuthApplicationKt         : No active profile set, falling back to 1 default profile: "default"
+2025-08-14T13:21:38.443+03:00  INFO 18170 --- [music_auth] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-14T13:21:38.479+03:00  INFO 18170 --- [music_auth] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 33 ms. Found 1 JPA repository interface.
+2025-08-14T13:21:38.686+03:00  INFO 18170 --- [music_auth] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-14T13:21:38.700+03:00  INFO 18170 --- [music_auth] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-14T13:21:38.709+03:00  INFO 18170 --- [music_auth] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-14T13:21:38.809+03:00  INFO 18170 --- [music_auth] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-14T13:21:38.817+03:00  INFO 18170 --- [music_auth] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-14T13:21:38.884+03:00  INFO 18170 --- [music_auth] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@690ed13a
+2025-08-14T13:21:38.884+03:00  INFO 18170 --- [music_auth] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-14T13:21:38.909+03:00  INFO 18170 --- [music_auth] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-14T13:21:39.186+03:00  INFO 18170 --- [music_auth] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-14T13:21:39.216+03:00  INFO 18170 --- [music_auth] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14T13:21:39.365+03:00  INFO 18170 --- [music_auth] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-14T13:21:39.622+03:00  INFO 18170 --- [music_auth] [main] g.s.a.GrpcServerFactoryAutoConfiguration : Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2025-08-14T13:21:39.626+03:00  WARN 18170 --- [music_auth] [main] s.c.a.AnnotationConfigApplicationContext : Exception encountered during context initialization - cancelling refresh attempt: org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shadedNettyGrpcServerFactory' defined in class path resource [net/devh/boot/grpc/server/autoconfigure/GrpcServerFactoryAutoConfiguration.class]: Failed to instantiate [net.devh.boot.grpc.server.serverfactory.ShadedNettyGrpcServerFactory]: Factory method 'shadedNettyGrpcServerFactory' threw exception with message: Bad return type
+Exception Details:
+  Location:
+    dev/music/auth/SignUpRequest.internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable; @4: areturn
+  Reason:
+    Type 'com/google/protobuf/GeneratedMessageV3$FieldAccessorTable' (current frame, stack[0]) is not assignable to 'com/google/protobuf/GeneratedMessage$FieldAccessorTable' (from method signature)
+  Current Frame:
+    bci: @4
+    flags: { }
+    locals: { 'dev/music/auth/SignUpRequest' }
+    stack: { 'com/google/protobuf/GeneratedMessageV3$FieldAccessorTable' }
+  Bytecode:
+    0000000: 2ab6 00bf b0                           
+
+2025-08-14T13:21:39.627+03:00  INFO 18170 --- [music_auth] [main] j.LocalContainerEntityManagerFactoryBean : Closing JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14T13:21:39.627+03:00  INFO 18170 --- [music_auth] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown initiated...
+2025-08-14T13:21:39.628+03:00  INFO 18170 --- [music_auth] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Shutdown completed.
+2025-08-14T13:21:39.631+03:00  INFO 18170 --- [music_auth] [main] .s.b.a.l.ConditionEvaluationReportLogger : 
+
+Error starting ApplicationContext. To display the condition evaluation report re-run your application with 'debug' enabled.
+2025-08-14T13:21:39.636+03:00 ERROR 18170 --- [music_auth] [main] o.s.boot.SpringApplication               : Application run failed
+
+org.springframework.beans.factory.BeanCreationException: Error creating bean with name 'shadedNettyGrpcServerFactory' defined in class path resource [net/devh/boot/grpc/server/autoconfigure/GrpcServerFactoryAutoConfiguration.class]: Failed to instantiate [net.devh.boot.grpc.server.serverfactory.ShadedNettyGrpcServerFactory]: Factory method 'shadedNettyGrpcServerFactory' threw exception with message: Bad return type
+Exception Details:
+  Location:
+    dev/music/auth/SignUpRequest.internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable; @4: areturn
+  Reason:
+    Type 'com/google/protobuf/GeneratedMessageV3$FieldAccessorTable' (current frame, stack[0]) is not assignable to 'com/google/protobuf/GeneratedMessage$FieldAccessorTable' (from method signature)
+  Current Frame:
+    bci: @4
+    flags: { }
+    locals: { 'dev/music/auth/SignUpRequest' }
+    stack: { 'com/google/protobuf/GeneratedMessageV3$FieldAccessorTable' }
+  Bytecode:
+    0000000: 2ab6 00bf b0                           
+
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:657) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiateUsingFactoryMethod(ConstructorResolver.java:645) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.instantiateUsingFactoryMethod(AbstractAutowireCapableBeanFactory.java:1375) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBeanInstance(AbstractAutowireCapableBeanFactory.java:1205) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.doCreateBean(AbstractAutowireCapableBeanFactory.java:569) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.AbstractAutowireCapableBeanFactory.createBean(AbstractAutowireCapableBeanFactory.java:529) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.lambda$doGetBean$0(AbstractBeanFactory.java:339) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.DefaultSingletonBeanRegistry.getSingleton(DefaultSingletonBeanRegistry.java:373) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.doGetBean(AbstractBeanFactory.java:337) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.AbstractBeanFactory.getBean(AbstractBeanFactory.java:202) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.instantiateSingleton(DefaultListableBeanFactory.java:1222) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingleton(DefaultListableBeanFactory.java:1188) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.DefaultListableBeanFactory.preInstantiateSingletons(DefaultListableBeanFactory.java:1123) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.context.support.AbstractApplicationContext.finishBeanFactoryInitialization(AbstractApplicationContext.java:987) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.context.support.AbstractApplicationContext.refresh(AbstractApplicationContext.java:627) ~[spring-context-6.2.9.jar:6.2.9]
+	at org.springframework.boot.SpringApplication.refresh(SpringApplication.java:752) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.refreshContext(SpringApplication.java:439) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:318) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1361) ~[spring-boot-3.5.4.jar:3.5.4]
+	at org.springframework.boot.SpringApplication.run(SpringApplication.java:1350) ~[spring-boot-3.5.4.jar:3.5.4]
+	at dev.music.auth.AuthApplicationKt.main(AuthApplication.kt:16) ~[main/:na]
+Caused by: org.springframework.beans.BeanInstantiationException: Failed to instantiate [net.devh.boot.grpc.server.serverfactory.ShadedNettyGrpcServerFactory]: Factory method 'shadedNettyGrpcServerFactory' threw exception with message: Bad return type
+Exception Details:
+  Location:
+    dev/music/auth/SignUpRequest.internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable; @4: areturn
+  Reason:
+    Type 'com/google/protobuf/GeneratedMessageV3$FieldAccessorTable' (current frame, stack[0]) is not assignable to 'com/google/protobuf/GeneratedMessage$FieldAccessorTable' (from method signature)
+  Current Frame:
+    bci: @4
+    flags: { }
+    locals: { 'dev/music/auth/SignUpRequest' }
+    stack: { 'com/google/protobuf/GeneratedMessageV3$FieldAccessorTable' }
+  Bytecode:
+    0000000: 2ab6 00bf b0                           
+
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:200) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiateWithFactoryMethod(SimpleInstantiationStrategy.java:89) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.instantiate(SimpleInstantiationStrategy.java:169) ~[spring-beans-6.2.9.jar:6.2.9]
+	at org.springframework.beans.factory.support.ConstructorResolver.instantiate(ConstructorResolver.java:653) ~[spring-beans-6.2.9.jar:6.2.9]
+	... 20 common frames omitted
+Caused by: java.lang.VerifyError: Bad return type
+Exception Details:
+  Location:
+    dev/music/auth/SignUpRequest.internalGetFieldAccessorTable()Lcom/google/protobuf/GeneratedMessage$FieldAccessorTable; @4: areturn
+  Reason:
+    Type 'com/google/protobuf/GeneratedMessageV3$FieldAccessorTable' (current frame, stack[0]) is not assignable to 'com/google/protobuf/GeneratedMessage$FieldAccessorTable' (from method signature)
+  Current Frame:
+    bci: @4
+    flags: { }
+    locals: { 'dev/music/auth/SignUpRequest' }
+    stack: { 'com/google/protobuf/GeneratedMessageV3$FieldAccessorTable' }
+  Bytecode:
+    0000000: 2ab6 00bf b0                           
+
+	at dev.music.auth.AuthServiceGrpc.getSignUpMethod(AuthServiceGrpc.java:38) ~[main/:na]
+	at dev.music.auth.AuthServiceGrpc.getServiceDescriptor(AuthServiceGrpc.java:286) ~[main/:na]
+	at dev.music.auth.AuthServiceGrpcKt$AuthServiceCoroutineImplBase.bindService(AuthGrpcKt.kt:93) ~[main/:na]
+	at net.devh.boot.grpc.server.service.AnnotationGrpcServiceDiscoverer.findGrpcServices(AnnotationGrpcServiceDiscoverer.java:61) ~[grpc-server-spring-boot-starter-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at net.devh.boot.grpc.server.autoconfigure.GrpcServerFactoryAutoConfiguration.shadedNettyGrpcServerFactory(GrpcServerFactoryAutoConfiguration.java:75) ~[grpc-server-spring-boot-starter-3.1.0.RELEASE.jar:3.1.0.RELEASE]
+	at java.base/jdk.internal.reflect.DirectMethodHandleAccessor.invoke(DirectMethodHandleAccessor.java:103) ~[na:na]
+	at java.base/java.lang.reflect.Method.invoke(Method.java:580) ~[na:na]
+	at org.springframework.beans.factory.support.SimpleInstantiationStrategy.lambda$instantiate$0(SimpleInstantiationStrategy.java:172) ~[spring-beans-6.2.9.jar:6.2.9]
+	... 23 common frames omitted
+
+2025-08-14T13:28:50.777+03:00  INFO 18299 --- [music_auth] [main] dev.music.auth.AuthApplicationKt         : Starting AuthApplicationKt using Java 21.0.7 with PID 18299 (/Users/timurmuhametanov/Documents/dev/music/auth/build/classes/kotlin/main started by timurmuhametanov in /Users/timurmuhametanov/Documents/dev/music)
+2025-08-14T13:28:50.779+03:00  INFO 18299 --- [music_auth] [main] dev.music.auth.AuthApplicationKt         : No active profile set, falling back to 1 default profile: "default"
+2025-08-14T13:28:51.085+03:00  INFO 18299 --- [music_auth] [main] .s.d.r.c.RepositoryConfigurationDelegate : Bootstrapping Spring Data JPA repositories in DEFAULT mode.
+2025-08-14T13:28:51.109+03:00  INFO 18299 --- [music_auth] [main] .s.d.r.c.RepositoryConfigurationDelegate : Finished Spring Data repository scanning in 20 ms. Found 1 JPA repository interface.
+2025-08-14T13:28:51.281+03:00  INFO 18299 --- [music_auth] [main] o.hibernate.jpa.internal.util.LogHelper  : HHH000204: Processing PersistenceUnitInfo [name: default]
+2025-08-14T13:28:51.304+03:00  INFO 18299 --- [music_auth] [main] org.hibernate.Version                    : HHH000412: Hibernate ORM core version 6.6.22.Final
+2025-08-14T13:28:51.317+03:00  INFO 18299 --- [music_auth] [main] o.h.c.internal.RegionFactoryInitiator    : HHH000026: Second-level cache disabled
+2025-08-14T13:28:51.422+03:00  INFO 18299 --- [music_auth] [main] o.s.o.j.p.SpringPersistenceUnitInfo      : No LoadTimeWeaver setup: ignoring JPA class transformer
+2025-08-14T13:28:51.432+03:00  INFO 18299 --- [music_auth] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Starting...
+2025-08-14T13:28:51.506+03:00  INFO 18299 --- [music_auth] [main] com.zaxxer.hikari.pool.HikariPool        : HikariPool-1 - Added connection org.postgresql.jdbc.PgConnection@6f52a229
+2025-08-14T13:28:51.507+03:00  INFO 18299 --- [music_auth] [main] com.zaxxer.hikari.HikariDataSource       : HikariPool-1 - Start completed.
+2025-08-14T13:28:51.537+03:00  INFO 18299 --- [music_auth] [main] org.hibernate.orm.connections.pooling    : HHH10001005: Database info:
+	Database JDBC URL [Connecting through datasource 'HikariDataSource (HikariPool-1)']
+	Database driver: undefined/unknown
+	Database version: 15.13
+	Autocommit mode: undefined/unknown
+	Isolation level: undefined/unknown
+	Minimum pool size: undefined/unknown
+	Maximum pool size: undefined/unknown
+2025-08-14T13:28:51.820+03:00  INFO 18299 --- [music_auth] [main] o.h.e.t.j.p.i.JtaPlatformInitiator       : HHH000489: No JTA platform available (set 'hibernate.transaction.jta.platform' to enable JTA platform integration)
+2025-08-14T13:28:51.845+03:00  INFO 18299 --- [music_auth] [main] j.LocalContainerEntityManagerFactoryBean : Initialized JPA EntityManagerFactory for persistence unit 'default'
+2025-08-14T13:28:52.001+03:00  INFO 18299 --- [music_auth] [main] o.s.d.j.r.query.QueryEnhancerFactory     : Hibernate is in classpath; If applicable, HQL parser will be used.
+2025-08-14T13:28:52.265+03:00  INFO 18299 --- [music_auth] [main] g.s.a.GrpcServerFactoryAutoConfiguration : Detected grpc-netty-shaded: Creating ShadedNettyGrpcServerFactory
+2025-08-14T13:28:52.370+03:00  INFO 18299 --- [music_auth] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: dev.music.auth.AuthService, bean: signUpGrpcAdapterImpl, class: dev.music.auth.apps.sign_up.gprc.SignUpGrpcAdapterImpl
+2025-08-14T13:28:52.371+03:00  INFO 18299 --- [music_auth] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.health.v1.Health, bean: grpcHealthService, class: io.grpc.protobuf.services.HealthServiceImpl
+2025-08-14T13:28:52.371+03:00  INFO 18299 --- [music_auth] [main] n.d.b.g.s.s.AbstractGrpcServerFactory    : Registered gRPC service: grpc.reflection.v1alpha.ServerReflection, bean: protoReflectionService, class: io.grpc.protobuf.services.ProtoReflectionService
+2025-08-14T13:28:52.406+03:00  INFO 18299 --- [music_auth] [main] n.d.b.g.s.s.GrpcServerLifecycle          : gRPC Server started, listening on address: *, port: 9090
+2025-08-14T13:28:52.409+03:00  INFO 18299 --- [music_auth] [main] dev.music.auth.AuthApplicationKt         : Started AuthApplicationKt in 1.785 seconds (process running for 2.051)

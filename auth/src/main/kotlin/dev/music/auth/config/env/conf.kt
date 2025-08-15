@@ -8,7 +8,7 @@ class EnvConf {
     fun load() {
       val env = Dotenv.configure()
         .directory("./auth")
-        .filename(".env")
+        .filename(".env.local")
         .load()
         .entries()
 

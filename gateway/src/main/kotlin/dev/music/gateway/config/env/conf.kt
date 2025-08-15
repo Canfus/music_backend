@@ -8,7 +8,7 @@ class EnvConf {
     fun load() {
       val entries = Dotenv.configure()
         .directory("./gateway")
-        .filename(".env")
+        .filename(".env.local")
         .load()
         .entries()
 

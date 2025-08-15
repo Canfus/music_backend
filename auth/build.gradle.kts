@@ -1,5 +1,3 @@
-val protobufVersion = "3.25.3"
-val grpcVersion     = "1.62.2"
 val grpcKtVersion   = "1.4.0"
 
 plugins {
